@@ -28,26 +28,41 @@ MONGODB_URI=mongodb+srv://<username>:<password>@testingpersona.er2filt.mongodb.n
 
 ```
 
-5. Ejecuta el proyecto: `npm start`
+5.  Ejecuta el proyecto: `npm init`
+6.  “fsevents.node” cannot be opened because the developer cannot be verified.
+    error suele ocurrir en macOS al instalar dependencias de Node.js debido a la protección de integridad del sistema de Apple. Para solucionarlo, puedes seguir los siguientes pasos:
+
+        ```rm -rf node_modules
+        npm cache clean --force
+        npm install
+
+        Si aún experimentas el mismo error, puedes deshabilitar temporalmente la protección de integridad del sistema de Apple ejecutando el siguiente comando en la terminal:
+
+        sudo spctl --master-disable
+        sudo spctl --master-enable
+
+        ```
 
 ### Estructura del Proyecto
 
 Breve descripción de la estructura de archivos del proyecto.
 
 ```
+
 nombre-del-proyecto/
 ├── index.js
 ├── database/
-│   └── config.js
+│ └── config.js
 ├── models/
-│   └── Usuario.js
+│ └── Usuario.js
 ├── controllers/
-│   └── authController.js
+│ └── authController.js
 ├── middlewares/
-│   ├── validar-campos.js
-│   └── validar-jwt.js
+│ ├── validar-campos.js
+│ └── validar-jwt.js
 └── helpers/
-    └── jwt.js
+└── jwt.js
+
 ```
 
 ### Uso
