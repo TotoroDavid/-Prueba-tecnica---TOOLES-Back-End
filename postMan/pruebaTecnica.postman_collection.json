@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "ecfa68f9-175f-4db2-8482-9c0986f16a6c",
+		"name": "pruebaTecnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15966571"
+	},
+	"item": [
+		{
+			"name": "Auth - Creacion de usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Juan Perez2\",\n  \"correo\": \"juanperez2@example.com\",\n  \"edad\": 30,\n  \"fechaNacimiento\": \"1992-01-01\",\n  \"contraseña\":\"123456\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth-Login Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"correo\": \"juanperez2@example.com\",\n  \"contraseña\":\"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReValidar JWT",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2Y3ZTYyNjVkODE0Y2JlNGM1OGZjMTAiLCJuYW1lIjoiSnVhbiBQZXJlejIiLCJpYXQiOjE2NzcxOTA2OTQsImV4cCI6MTY3NzE5Nzg5NH0.Jj8DMiQz64vNj6vkQ7yod5k2st2bbr2QRe6sh7DH2J8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"correo\": \"juanperez2@example.com\",\n  \"contraseña\":\"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/renew",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"renew"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
