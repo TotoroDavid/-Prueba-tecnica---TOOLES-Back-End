@@ -18,7 +18,7 @@ Para ejecutar este proyecto necesitarás tener instalado lo siguiente:
 
 Sigue los siguientes pasos para instalar y ejecutar el proyecto en tu máquina local:
 
-1. Clona el repositorio: `git clone https://github.com/tu-usuario/nombre-del-repositorio.git`
+1. Clona el repositorio: `git clone https://github.com/TotoroDavid/-Prueba-tecnica---TOOLES-Back-End`
 2. Ve a la carpeta del proyecto: `cd nombre-del-repositorio`
 3. Instala las dependencias: `npm install`
 4. El archivo .env En este caso dejare el archivo para que sea mas facil de probar el proyecto,para poder cambiar la base de datos de MongoDB cambiarlo por el tuyo tambien puedejes colocarlo Por ejemplo:
@@ -42,6 +42,21 @@ MONGODB_URI=mongodb+srv://<username>:<password>@testingpersona.er2filt.mongodb.n
         sudo spctl --master-enable
 
         ```
+
+7.  para poder darnos cuenta de la verificacion del mail, tenemos que configurarlo manualmente en nuestro archivo .env
+    para esto puedes crear un usuario, gratis y rapido en el siguiente link
+    https://ethereal.email/login
+    le das click,
+    createTestAccount method or to create an user,
+    y despues de eso tendremos que reemplazar las credeciales en nuestro .env
+
+```
+USERMAIL= ethereal.email-Username
+MAILPASSWORD= ethereal.email-Password
+
+```
+
+Despues de que lo configure, y un nuevo usuario se registre trendra que ir a la pagina y darle ↗ OpenMailBox y podras comprobar la notificacion con los datos del nuevo usuario
 
 ### Estructura del Proyecto
 

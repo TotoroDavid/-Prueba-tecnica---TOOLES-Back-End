@@ -41,10 +41,11 @@ const createUser = async (req, res = response) => {
             host: 'smtp.ethereal.email',
             port: 587,
             auth: {
-                user: 'lilly.ernser79@ethereal.email',
-                pass: '3DfWJGkGpDpUX8Z9je'
+                user: process.env.USERMAIL,
+                pass: process.env.MAILPASSWORD
             }
         });
+
 
         const mailOptions = {
             from: 'tucorreo@gmail.com',
